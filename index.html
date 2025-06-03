@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+  <section class="body-inner">
+    <header>
+        <div class="menu-icon">☰</div>
+        <div class="logo"><img src="assets/images/dehati-logo.png" alt="" height="50px"></div>
+      </header>
+    
+      <div class="greeting">همان طعم همیشگی | شعبه کلار آباد</div>
+    
+      <div class="filters">
+        <button onclick="showSection('section1')" class="creambutton active">بستنی</button>
+        <button onclick="showSection('section2')" class="hotbutton">بار گرم</button>
+        <button onclick="showSection('section3')" class="coldbutton">بار سرد</button>
+      </div>
+      
+      <!-- first menu slider -->
+      <div class="slider active" id="section1">
+        <div class="slider-item activated" onclick="cardSection('cardsection1')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             بستنی 
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection2')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             کیک بستنی 
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection3')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             ویژه بر پایه بستنی 
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection4')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             دسر 
+        </div>
+      </div>
+
+      <!-- second menu slider -->
+      <div class="slider" id="section2">
+        <div id="secondslideritem" class="slider-item" onclick="cardSection('cardsection5')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             قهوه بر پایه اسپرسو 
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection6')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             قهوه , طعم دهنده/شیر
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection7')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             قهوه های دمی
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection8')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             ویژه بر پایه شیر 
+        </div>
+      </div>
+
+      <!-- third menu slider -->
+      <div class="slider" id="section3">
+        <div id="thirdslideritem" class="slider-item" onclick="cardSection('cardsection9')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             قهوه سرد
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection10')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             قهوه سرد دم
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection11')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             فراپاچینو
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection12')">
+            <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+             اسموتی بار 
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection13')">
+          <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+           ماکتیل بار 
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection14')">
+          <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+          میلک شیک بار 
+        </div>
+        <div class="slider-item" onclick="cardSection('cardsection15')">
+          <img src="assets/icons/icons8-ice-cream-50.png" alt="">
+          لیموناد بار 
+        </div>
+      </div>
+    
+      <!-- شیر بستنی -->
+      <div class="products activated" id="cardsection1">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شیر بستنی</h3>
+                <p>بستنی وانیلی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+    
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شیر بستنی با سس تمشک</h3>
+                <p>بستنی وانیلی , سس تمشک</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+              <h3>شیر بستنی با سس شکلات</h3>
+              <p>بستنی وانیلی , سس شکلات</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>بستنی سنتی</h3>
+                <p>بستنی زعفرانی , پسته و خامه</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- کیک بستنی -->
+      <div class="products" id="cardsection2">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>کیک بستنی</h3>
+                <p>کیک براونی , بستنی وانیلی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>کیک بستنی با سس تمشک</h3>
+                <p>کیک براونی , بستنی وانیلی و سس تمشک</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>کیک بستنی با سس شکلات</h3>
+                <p>کیک براونی , بستنی وانیلی و سس شکلات</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+      </div>
+
+      <!-- ویژه بر پایه بستنی-->
+      <div class="products" id="cardsection3">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>آفوگاتو</h3>
+                <p>اسپرسو , بستنی وانیلی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>کارامل لاور</h3>
+                <p>شکلات کاراملی , بستنی وانیلی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شوکوگاتو</h3>
+                <p>شکلات فندقی , بستنی وانیلی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+      </div>
+
+      <!-- دسر-->
+      <div class="products" id="cardsection4">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>فرنی</h3>
+                <p>شیر تازه , آرد برنج , دارچین و گردو</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>کیک روز</h3>
+                <p>کیک روز</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+      </div>
+
+      <!-- قهوه بر پایه اسپرسو -->
+      <div class="products" id="cardsection5">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>اسپرسو 100% عربیکا</h3>
+                <p>اسپشیالیتی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+              <h3>اسپرسو 50% عربیکا</h3>
+                <p>ترکیبی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>امریکانو 100% عربیکا</h3>
+                <p>اسپشیالیتی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+              <h3>امریکانو 50% عربیکا</h3>
+                <p>ترکیبی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+      </div>
+
+      <!-- قهوه بر پایه اسپرسو  طعم دهنده و شیر-->
+      <div class="products" id="cardsection6">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>کافه لاته</h3>
+                <p>اسپرسو شیر و فوم</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+              <h3>سینامون لته</h3>
+              <p>اسپرسو , دارچین , شیر و فوم</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>کوکونات لته</h3>
+                <p>اسپرسو , پوره نارگیل , شیر و فوم</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+              <h3>کاپوچینو</h3>
+                <p>کلاسیک , فندقی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+              <h3>کارامل ماکیاتو</h3>
+                <p>اسپرسو , کارامل , شیر وفوم</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+              <h3>موکاچینو</h3>
+              <p>اسپرسو , شکلات , شیر وفوم</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div> 
+        </div>
+      </div>
+
+      <!-- قهوه دمی -->
+      <div class="products" id="cardsection7">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>قهوه 100% عربیکا</h3>
+                <p>اسپشیالیتی نیکاراگوئه</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>قهوه 100% عربیکا</h3>
+                <p>اسپشیالیتی کلمبیا</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>آیریش کافی</h3>
+                <p>قهوه دمی , آیریش کرم</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- ویژه بر پایه شیر -->
+      <div class="products" id="cardsection8">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شیر شکلات غلیظ</h3>
+                <p>شیر , شکلات</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شیر شکلات فندقی</h3>
+                <p>شیر , شکلات فندقی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شیر شکلات سفید</h3>
+                <p>شیر , شکلات سفید</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شیر ماسالا ویژه</h3>
+                <p>شیر , ماسالا</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شیر عسل دارچین</h3>
+                <p>شیر , عسل و دارچین</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- قهوه سرد -->
+      <div class="products" id="cardsection9">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>آیس لاته آیریش</h3>
+                <p>اسپرسو , آیریش کرم و شیر سرد</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>آیس کوکونات لاته</h3>
+                <p>اسپرسو , پوره نارگیل و شیر سرد</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>آیس کارامل لاته</h3>
+                <p>اسپرسو , کارامل و شیر سرد</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>آیس موکاچینو</h3>
+                <p>اسپرسو , شکلات و شیر سرد</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>آیس امریکانو</h3>
+                <p>اسپرسو , آب سرد</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- قهوه سرد دم -->
+      <div class="products" id="cardsection10">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>قهوه 100% عربیکا</h3>
+                <p>اسپشیالیتی نیکاراگوئه , یخ</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>قهوه 100% عربیکا</h3>
+                <p>اسپشیالیتی کلمبیا , یخ</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- فراپاچینو -->
+      <div class="products" id="cardsection11">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>اورئو فراپاچینو</h3>
+                <p>اسپرسو , بسیکوییت اورئو , شیر و خامه</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>موکا فراپاچینو</h3>
+                <p>اسپرسو , شکلات فندقی , شیر و خامه</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>تروپیکال فراپاچینو</h3>
+                <p>پوره نارگیل , انبه , شیر و خامه</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- اسموتی بار -->
+      <div class="products" id="cardsection12">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>هالیدی</h3>
+                <p>زردآلو , شاتوت , پرتغال</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>چری بری</h3>
+                <p>آلبالو , زرشگ , توت فرنگی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>ویوالایف</h3>
+                <p>آناناس , انبه , موز , تروپیکال</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- ماکتیل بار -->
+      <div class="products" id="cardsection13">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>سوییت دریم</h3>
+                <p>آناناس , پشن فروت</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>رد لاین</h3>
+                <p>آلبالو , زرشگ , تمشک</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>شاینی گریپ</h3>
+                <p>انگور فرانسوی , میکس بری</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- میلک شیک بار -->
+      <div class="products" id="cardsection14">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>انرژی بوست</h3>
+                <p>بستنی وانیلی , موز , بادام هندی و درختی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>لوتوس لاور</h3>
+                <p>بستنی وانیلی , کرم لوتوس , کارامل</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>کیت کت بری</h3>
+                <p>بستنی وانیلی , توت فرنگی , کیت کت</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+      <!-- لیموناد بار -->
+      <div class="products" id="cardsection15">
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>لیموناد</h3>
+                <p>عصاره لیمو تازه , آب گازدار</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>موهیتو</h3>
+                <p>عصاره لیمو تازه , آب گازدار و نعنا</p>>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>بلو اوشن</h3>
+                <p>آب آناناس , عصاره بلو کاراسائو و آب لیمو</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+        <div class="card">
+          <div class="image-container">
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
+          </div>
+            <div class="card-inner">
+                <h3>پاور دریم</h3>
+                <p>آب آلوئه ورا , توت فرنگی و عصاره میوه لیچی</p>
+            </div>
+            <div class="card-price"><span>70.000 تومان</span></div>  
+        </div>
+      </div>
+
+
+      
+    
+    </section>
+      <footer>
+        
+      </footer>
+    
+      <script src="assets/js/scripts.js"></script>
+</body>
+</html>
