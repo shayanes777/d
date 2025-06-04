@@ -299,7 +299,7 @@ footer {
       
       <!-- first menu slider -->
       <div class="slider active" id="section1">
-        <div class="slider-item activated" onclick="cardSection('cardsection1')">
+        <div id="firstlideritem" class="slider-item activated" onclick="cardSection('cardsection1')">
             <img src="icons8-ice-cream-50.png" alt="">
              بستنی 
         </div>
@@ -974,9 +974,48 @@ footer {
     sections.forEach(section => section.classList.remove('active'));
     const buttons = document.querySelectorAll('.filters button');
     buttons.forEach(btn => btn.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
+    const el = document.getElementById(id);
+const elChild = el.firstElementChild;
+
+el.classList.add('active');
+if (elChild) elChild.classList.add('activated');
+if (event.target) event.target.classList.add('active');
+
+const first = document.getElementById('firstslideritem');
+const second = document.getElementById('secondslideritem');
+const third = document.getElementById('thirdslideritem');
+
+const productsEl = document.getElementsByClassName('products')[0];
+
+if (elChild === first) {
+  productsEl.classList.remove('activated');
+  document.getElementById('cardsection1')?.classList.add('activated');
+} else if (elChild === second) {
+  productsEl.classList.remove('activated');
+  document.getElementById('cardsection5')?.classList.add('activated');
+} else if(elChild === third) {
+  productsEl.classList.remove('activated');
+  document.getElementById('cardsection9')?.classList.add('activated');
+}
+    /*const el = document.getElementById(id);
+    const elChild = el.firstElementChild;
+    el.classList.add('active');
+    elChild.classList.add('activated');
     event.target.classList.add('active');
-    
+    if(elChild === document.getElementById('firstlideritem')){
+        document.getElementsByClassName('products').classList.remove('activated');
+        document.getElementById('cardsection1').classList.add('activated');
+    }  else if(elChild === document.getElementById('secondslideritem')){
+        document.getElementsByClassName('products').classList.remove('activated');
+        document.getElementById('cardsection5').classList.add('activated');
+    } else {
+        document.getElementsByClassName('products').classList.remove('activated');
+        document.getElementById('cardsection9').classList.add('activated');
+    }
+    console.log(elChild);
+    console.log(document.getElementById('firstlideritem'));
+    console.log(elChild === document.getElementById('firstlideritem'));
+    */
 }
 
 
@@ -988,6 +1027,10 @@ function cardSection(id){
     document.getElementById(id).classList.add('activated');
     event.target.classList.add('activated');
 }
+
+
+
+
 
     </script>
       <script src="assets/js/scripts.js"></script>
