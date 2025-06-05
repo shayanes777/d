@@ -1035,15 +1035,7 @@ footer {
     $('.slider-item').click(function () {
       $('.slider-item').removeClass('redborder');
       $(this).addClass('redborder');
-      const $sliderContainer = $('.slider');
-      const itemOffset = $(this).position().left;
-      const sliderContainerWidth = $sliderContainer.width();
-      const itemWidth = $(this).outerWidth();
-
-      $sliderContainer.animate({
-        scrollLeft:
-        $sliderContainer.scrollLeft() + itemOffset - (sliderContainerWidth - itemWidth)
-      }, 300);
+      $(this).appendTo('.slider');
     })
 
  
