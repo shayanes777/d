@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Document</title>
     <style>
-       @font-face {
+      @font-face {
   font-family: 'farhang';
-  src: url('Farhang2-Regular.ttf') format('truetype');
-  src: url('Farhang2FaNum-Regular.ttf') format('truetype');
+  src: url('../fonts/Farhang2-Regular.ttf') format('truetype');
+  src: url('../fonts/Farhang2FaNum-Regular.ttf') format('truetype');
   src: 
-  url('Farhang2-Regular.woff2') format('woff2'),
-  url('Farhang2-Regular.woff') format('woff');
+  url('../fonts/Farhang2-Regular.woff2') format('woff2'),
+  url('../fonts/Farhang2-Regular.woff') format('woff');
 }
 
 *{
@@ -94,7 +94,7 @@ header {
   border: 1px solid var(--blue);
   background-color: var(--white);
   color: var(--blue);
-  border-radius: 0.9rem;
+  border-radius: 0.3rem;
   font-weight: bold;
   cursor: pointer;
   width: 30%;
@@ -139,25 +139,29 @@ header {
 
 .redborder{
 border: 1px solid var(--red) !important;
+color: var(--blue) !important;
+
 }
 .slider-item {
   padding: 0.5rem;
-  border-radius: 0.6rem; 
+  border-radius: 0.3rem; 
   font-size: 1.3rem; 
   display: flex;
   align-items: center;
-  color: var(--blue);
+  color: rgb(71, 71, 71);
   cursor: pointer;
-  border: 1px solid var(--white);
+  border: 0.05px solid var(--white);
   white-space : nowrap;
 }
 
 .slider-item:hover , .slider-item:focus{
   border: 1px solid var(--red);
+  
 }
 
 .slider-item img{
   height: 2rem;
+  margin-left: 0.6rem;
 }
 
 .slider-item.activated{
@@ -170,7 +174,6 @@ border: 1px solid var(--red) !important;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 3rem;
-  border-bottom: 2px solid #eee;
 }
 
 .products.activated{
@@ -217,16 +220,18 @@ border: 1px solid var(--red) !important;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  padding: 0.8rem 0 1rem 0;
   width: 100%;
   height: 10rem;
   box-shadow: rgba(255, 0, 0, 0.1)0px 2px;
 }
 .card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 100%;
   position: relative;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-sizing: border-box;
 }
 
 .card-inner{
@@ -237,7 +242,7 @@ border: 1px solid var(--red) !important;
   padding: 0.6rem 1rem;
   margin-top: 0.7rem;
   margin-bottom: 0.2rem;
-  height: 6rem;
+  height: 6.7rem;
   }
 
 .card-inner h3 {
@@ -270,16 +275,29 @@ footer {
   margin-top: 2rem;
   text-align: center;
   font-size: 20px;
-  background: url('IMG_20250603_163949_888.jpg');
+  background: url('../images/footer.jpg');
   background-size: cover;
+  background-position-y: bottom;
   background-repeat: no-repeat;
   width: 100%;
-  height: 15rem;
+  height: 20rem;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+footer a{
+  color: #000 !important;
+  text-decoration: none;
+  background-color: var(--white);
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 @media(min-width: 500px) {
   .products{
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   .card{
     width: 42%;
@@ -298,15 +316,19 @@ footer {
 @media(min-width: 1024px) {
   .card{
     width: 23%;
+    height: 22rem;
+  }
+  .card .image-container{
+    height: 11rem;
   }
 }
     </style>
 </head>
 <body>
- <section class="body-inner">
+  <section class="body-inner">
     <header>
         <div class="menu-icon">☰</div>
-        <div class="logo"><img src="dehati-logo.png" alt="" height="50px"></div>
+        <div class="logo"><img src="assets/images/dehati-logo.png" alt="" height="50px"></div>
       </header>
     
            <div class="greeting"><span class="red">همان طعم همیشگی</span> | <span class="blue">شعبه کلار آباد</span></div>
@@ -321,19 +343,19 @@ footer {
       <!-- first menu slider -->
       <div class="slider d-flex" id="section1">
         <div id="firstlideritem" class="slider-item redborder" onclick="cardSection('cardsection1')">
-            <img src="icons8-ice-cream-50.png" alt="">
+            <img src="assets/icons/icons8-whipped-cream-50.png" alt="">
              بستنی 
         </div>
         <div class="slider-item" onclick="cardSection('cardsection2')">
-            <img src="icons8-ice-cream-50.png" alt="">
+            <img src="assets/icons/icons8-confectionery-50.png" alt="">
              کیک بستنی 
         </div>
         <div class="slider-item" onclick="cardSection('cardsection3')">
-            <img src="icons8-ice-cream-50.png" alt="">
-             ویژه بر پایه بستنی 
+            <img src="assets/icons/icons8-milkshake-50.png" alt="">
+         بستنی ویژه
         </div>
         <div class="slider-item" onclick="cardSection('cardsection4')">
-            <img src="icons8-ice-cream-50.png" alt="">
+            <img src="assets/icons/icons8-dessert-50.png" alt="">
              دسر 
         </div>
       </div>
@@ -341,51 +363,51 @@ footer {
       <!-- second menu slider -->
       <div class="slider" id="section2">
         <div id="secondslideritem" class="slider-item" onclick="cardSection('cardsection5')">
-            <img src="icons8-ice-cream-50.png" alt="">
-             قهوه بر پایه اسپرسو 
+            <img src="assets/icons/icons8-coffee-50.png" alt="">
+              اسپرسو 
         </div>
         <div class="slider-item" onclick="cardSection('cardsection6')">
-            <img src="icons8-ice-cream-50.png" alt="">
-             قهوه , طعم دهنده/شیر
+            <img src="assets/icons/icons8-cup-50.png" alt="">
+             قهوه , شیر
         </div>
         <div class="slider-item" onclick="cardSection('cardsection7')">
-            <img src="icons8-ice-cream-50.png" alt="">
+            <img src="assets/icons/icons8-hot-springs-50.png" alt="">
              قهوه های دمی
         </div>
         <div class="slider-item" onclick="cardSection('cardsection8')">
-            <img src="icons8-ice-cream-50.png" alt="">
-             ویژه بر پایه شیر 
+            <img src="assets/icons/icons8-milkshake-50.png" alt="">
+               پایه شیر 
         </div>
       </div>
 
       <!-- third menu slider -->
       <div class="slider" id="section3">
         <div id="thirdslideritem" class="slider-item" onclick="cardSection('cardsection9')">
-            <img src="icons8-ice-cream-50.png" alt="">
+            <img src="assets/icons/icons8-iced-coffee-50.png" alt="">
              قهوه سرد
         </div>
         <div class="slider-item" onclick="cardSection('cardsection10')">
-            <img src="icons8-ice-cream-50.png" alt="">
+            <img src="assets/icons/icons8-iced-coffee-50.png" alt="">
              قهوه سرد دم
         </div>
         <div class="slider-item" onclick="cardSection('cardsection11')">
-            <img src="icons8-ice-cream-50.png" alt="">
+            <img src="assets/icons/icons8-milkshake-50.png" alt="">
              فراپاچینو
         </div>
         <div class="slider-item" onclick="cardSection('cardsection12')">
-            <img src="icons8-ice-cream-50.png" alt="">
+            <img src="assets/icons/icons8-orange-juice-50.png" alt="">
              اسموتی بار 
         </div>
         <div class="slider-item" onclick="cardSection('cardsection13')">
-          <img src="icons8-ice-cream-50.png" alt="">
+          <img src="assets/icons/icons8-coconut-cocktail-50.png" alt="">
            ماکتیل بار 
         </div>
         <div class="slider-item" onclick="cardSection('cardsection14')">
-          <img src="icons8-ice-cream-50.png" alt="">
+          <img src="assets/icons/icons8-milkshake-50.png" alt="">
           میلک شیک بار 
         </div>
         <div class="slider-item" onclick="cardSection('cardsection15')">
-          <img src="icons8-ice-cream-50.png" alt="">
+          <img src="assets/icons/icons8-orange-juice-50.png" alt="">
           لیموناد بار 
         </div>
       </div>
@@ -394,7 +416,7 @@ footer {
       <div class="products activated" id="cardsection1">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/shirbastani.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شیر بستنی</h3>
@@ -405,7 +427,7 @@ footer {
     
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/shirbastanit.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شیر بستنی با سس تمشک</h3>
@@ -416,7 +438,7 @@ footer {
 
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/shirbastanic.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
               <h3>شیر بستنی با سس شکلات</h3>
@@ -426,7 +448,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>بستنی سنتی</h3>
@@ -440,7 +462,7 @@ footer {
       <div class="products" id="cardsection2">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/icecreamcake.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>کیک بستنی</h3>
@@ -450,7 +472,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/raspberry.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>کیک بستنی با سس تمشک</h3>
@@ -460,7 +482,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/icecake.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>کیک بستنی با سس شکلات</h3>
@@ -474,7 +496,7 @@ footer {
       <div class="products" id="cardsection3">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/affogato.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>آفوگاتو</h3>
@@ -484,7 +506,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/caramellover.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>کارامل لاور</h3>
@@ -494,7 +516,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/chocogato.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شوکوگاتو</h3>
@@ -508,7 +530,7 @@ footer {
       <div class="products" id="cardsection4">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>فرنی</h3>
@@ -518,7 +540,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>کیک روز</h3>
@@ -532,7 +554,7 @@ footer {
       <div class="products" id="cardsection5">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/espresso.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>اسپرسو 100% عربیکا</h3>
@@ -542,7 +564,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/espresso.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
               <h3>اسپرسو 50% عربیکا</h3>
@@ -552,7 +574,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>امریکانو 100% عربیکا</h3>
@@ -562,7 +584,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
               <h3>امریکانو 50% عربیکا</h3>
@@ -576,7 +598,7 @@ footer {
       <div class="products" id="cardsection6">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>کافه لاته</h3>
@@ -586,7 +608,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
               <h3>سینامون لته</h3>
@@ -596,7 +618,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>کوکونات لته</h3>
@@ -606,7 +628,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
               <h3>کاپوچینو</h3>
@@ -616,7 +638,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
               <h3>کارامل ماکیاتو</h3>
@@ -626,7 +648,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
               <h3>موکاچینو</h3>
@@ -640,7 +662,7 @@ footer {
       <div class="products" id="cardsection7">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>قهوه 100% عربیکا</h3>
@@ -650,7 +672,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>قهوه 100% عربیکا</h3>
@@ -660,7 +682,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>آیریش کافی</h3>
@@ -674,7 +696,7 @@ footer {
       <div class="products" id="cardsection8">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شیر شکلات غلیظ</h3>
@@ -684,7 +706,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شیر شکلات فندقی</h3>
@@ -694,7 +716,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شیر شکلات سفید</h3>
@@ -704,7 +726,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شیر ماسالا ویژه</h3>
@@ -714,7 +736,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شیر عسل دارچین</h3>
@@ -728,7 +750,7 @@ footer {
       <div class="products" id="cardsection9">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/icemocha.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>آیس لاته آیریش</h3>
@@ -738,7 +760,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>آیس کوکونات لاته</h3>
@@ -748,7 +770,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>آیس کارامل لاته</h3>
@@ -758,7 +780,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/icemocha.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>آیس موکاچینو</h3>
@@ -768,7 +790,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>آیس امریکانو</h3>
@@ -782,7 +804,7 @@ footer {
       <div class="products" id="cardsection10">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>قهوه 100% عربیکا</h3>
@@ -792,7 +814,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/americano.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>قهوه 100% عربیکا</h3>
@@ -806,7 +828,7 @@ footer {
       <div class="products" id="cardsection11">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/oreofra.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>اورئو فراپاچینو</h3>
@@ -816,7 +838,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/mochapacino.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>موکا فراپاچینو</h3>
@@ -826,7 +848,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/tropical.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>تروپیکال فراپاچینو</h3>
@@ -840,7 +862,7 @@ footer {
       <div class="products" id="cardsection12">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/cherryberry.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>هالیدی</h3>
@@ -850,7 +872,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/oreo.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>چری بری</h3>
@@ -860,7 +882,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/viva.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>ویوالایف</h3>
@@ -874,7 +896,7 @@ footer {
       <div class="products" id="cardsection13">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/sweetdream.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>سوییت دریم</h3>
@@ -884,7 +906,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/redline.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>رد لاین</h3>
@@ -894,7 +916,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/shinegrape.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>شاینی گریپ</h3>
@@ -908,7 +930,7 @@ footer {
       <div class="products" id="cardsection14">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/energyboost.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>انرژی بوست</h3>
@@ -918,7 +940,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/lotosshake.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>لوتوس لاور</h3>
@@ -928,7 +950,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/kitkatberry.jpg" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>کیت کت بری</h3>
@@ -942,7 +964,7 @@ footer {
       <div class="products" id="cardsection15">
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>لیموناد</h3>
@@ -952,7 +974,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>موهیتو</h3>
@@ -962,7 +984,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>بلو اوشن</h3>
@@ -972,7 +994,7 @@ footer {
         </div>
         <div class="card">
           <div class="image-container">
-            <img src="menu-item.png" alt="Coffee"/>
+            <img src="assets/images/menu-item.png" alt="Coffee"/>
           </div>
             <div class="card-inner">
                 <h3>پاور دریم</h3>
@@ -987,12 +1009,23 @@ footer {
     
     </section>
       <footer>
-        
+        <a href="https://www.instagram.com/devroast?igsh=MW43eHRiaDhtcXZneA==">DevRoast@</a>
+      </footer>
+      <script src="assets/js/jq.js"></script>
+      <script src="assets/js/scripts.js"></script>
+
+
+
+      
+    
+    </section>
+      <footer>
+        <a href="https://www.instagram.com/devroast?igsh=MW43eHRiaDhtcXZneA==">DevRoast@</a>
       </footer>
       <script src="jq.js"></script>
       <script src="scripts.js"></script>
     <script>
-        
+        </body>
   function cardSection(id){
     $('.products').removeClass('activated');
     $(`#${id}`).addClass('activated');
